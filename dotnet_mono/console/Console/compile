@@ -1,0 +1,5 @@
+export MCS_COLORS=errors=brightwhite,red
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/vs/dev/work/scratch1/pc_app/fixed_lib/bin
+mcs /target:module system_lib.cs
+mcs /target:module ring_buffer.cs
+mcs mono_main.cs   -addmodule:system_lib.netmodule -addmodule:ring_buffer.netmodule
