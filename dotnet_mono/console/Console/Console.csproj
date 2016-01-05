@@ -48,7 +48,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ring_buffer.cs" />
-    <Compile Include="serial_comm.cs" />
     <Compile Include="stopWatch.cs" />
   </ItemGroup>
   <ItemGroup>
