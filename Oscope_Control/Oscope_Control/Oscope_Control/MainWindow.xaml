@@ -5,8 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Oscope_Control"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="664.268" Width="1062.553">
+    <Grid Margin="0,0,3.4,-0.2">
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="478" Margin="10,10,0,0" VerticalAlignment="Top" Width="1013">
+            <TabItem Header="Signal Demo">
+                <Grid Background="#FFE5E5E5" Margin="0,0,0.2,-8.6"/>
+            </TabItem>
+            <TabItem Header="Input Capture">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Output Capture" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="53.6">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="180*"/>
+                        <ColumnDefinition Width="827*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Scope" HorizontalAlignment="Left" Width="53" Margin="-1.6,-2,0,2">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="109*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </TabItem>
+            <TabItem Header="GPIO" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="53.6">
+                <Grid Background="#FFE5E5E5" Margin="0,0,167.2,4.4"/>
+            </TabItem>
+        </TabControl>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="136,509,0,0" VerticalAlignment="Top" Width="841" Height="33"/>
+        <Slider x:Name="slider_Copy" HorizontalAlignment="Left" Margin="136,567,0,0" VerticalAlignment="Top" Width="841" Height="33"/>
+        <Label x:Name="label" Content="Label" Margin="23,509,0,0" VerticalAlignment="Top" Height="33" HorizontalAlignment="Left" Width="91"/>
+        <Label x:Name="label_Copy" Content="Label" Margin="23,567,0,0" VerticalAlignment="Top" Height="33" HorizontalAlignment="Left" Width="91"/>
+
     </Grid>
 </Window>
