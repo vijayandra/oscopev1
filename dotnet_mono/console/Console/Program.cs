@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using StdOut=System.Console;
 using Setting;
 using MyStopWatch;
-using PortComm;
 using System.Collections;
 using System.IO.Ports;
 using System.IO;
@@ -39,8 +38,7 @@ class Program
         //System.Timers.Timer myTimer = new System.Timers.Timer();
         StopWatch  sTimer;
         SerialQueue Q   = new SerialQueue();
-        Serial_Comm port= new Serial_Comm();
-
+      
         //IntPtr windowHandle = (new WindowInteropHelper(this)).Handle;
         //HwndSource src = HwndSource.FromHwnd(windowHandle);
         //src.AddHook(new HwndSourceHook(WndProc));
@@ -123,7 +121,7 @@ class Program
         {
             System.Console.Write("One COM PORT found on system");
             System.Console.Write("Serial Port={0}", cmPort[0]);
-            Serial_Comm.setSerial(cmPort[0],115200);
+           
             myTimer.Start();
         }
 
@@ -180,7 +178,7 @@ class Program
     {
         byte[] Bytes = new byte[10];
         //System.Console.WriteLine("Timer {0}", e.SignalTime);
-        Serial_Comm.writeOutBuffer("Vijayandra Kumar Singh");
+       
         //Serial_Comm.encodeATEMsg(0x1000, ref Bytes,0);
     }
 }

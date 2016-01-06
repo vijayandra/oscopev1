@@ -135,7 +135,6 @@ struct sco
     public short lastMem;
 }
 
-
 public static class fixed_lib
 {
     [DllImport ("libfixed_lib.so")]
@@ -154,10 +153,44 @@ public static class fixed_lib
     public static extern void WaitTag(int wTimeMs);
 
     [DllImport ("libfixed_lib.so")]
-    public static extern void lPushTag(byte cmd,IntPtr buffer,byte len);
+    public static extern byte lPushTag(byte cmd,IntPtr buffer,byte len);
 
     [DllImport ("libfixed_lib.so")]
     public static extern int lPullTag(IntPtr buffer);
+
+    public static byte llPushTag(byte cmdx,ref byte[]byteBuff,byte len)
+    {
+        byte l;
+        int size = Marshal.SizeOf(byteBuff[0]) * byteBuff.Length;
+        IntPtr pnt = Marshal.AllocHGlobal(size);
+        Marshal.Copy(byteBuff, 0, pnt, byteBuff.Length);
+
+        l=lPushTag(cmdx,pnt,len);
+
+        Marshal.FreeHGlobal(pnt);
+
+        return l;
+    }
+
+    public static byte llPullTag(ref byte[]byteBuff,ref byte len)
+    {
+        byte cmdx;
+        int retVal;
+        int size = Marshal.SizeOf(byteBuff[0]) * byteBuff.Length;
+
+        IntPtr pnt = Marshal.AllocHGlobal(size);
+
+        retVal = lPullTag(pnt);
+
+        cmdx = (byte)retVal;
+        len  = (byte)(retVal>>8);
+
+        Marshal.Copy(pnt,byteBuff,0,byteBuff.Length);
+
+        Marshal.FreeHGlobal(pnt);
+
+        return cmdx;
+    }
 }
 }
 
