@@ -1,0 +1,14 @@
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\bin\Debug\Oscope_Control.exe.config
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\bin\Debug\Oscope_Control.exe
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\bin\Debug\Oscope_Control.pdb
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\obj\Debug\MainWindow.g.cs
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\obj\Debug\App.g.cs
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\obj\Debug\Oscope_Control_MarkupCompile.cache
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\obj\Debug\Oscope_Control_MarkupCompile.lref
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\obj\Debug\MainWindow.baml
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\obj\Debug\Oscope_Control.g.resources
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\obj\Debug\Oscope_Control.Properties.Resources.resources
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\obj\Debug\Oscope_Control.csproj.GenerateResource.Cache
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\obj\Debug\Oscope_Control.exe
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\obj\Debug\Oscope_Control.pdb
+C:\github\Oscope_Control\Oscope_Control\Oscope_Control\obj\Debug\Oscope_Control.csprojResolveAssemblyReference.cache
