@@ -1,0 +1,5 @@
+C:\github\dotnet_mono\console\Console\bin\Debug\Console.exe.config
+C:\github\dotnet_mono\console\Console\bin\Debug\Console.exe
+C:\github\dotnet_mono\console\Console\bin\Debug\Console.pdb
+C:\github\dotnet_mono\console\Console\obj\Debug\Console.exe
+C:\github\dotnet_mono\console\Console\obj\Debug\Console.pdb
