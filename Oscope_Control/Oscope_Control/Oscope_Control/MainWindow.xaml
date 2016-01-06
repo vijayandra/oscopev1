@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Oscope_Control"
         mc:Ignorable="d"
-        Title="MainWindow" Height="664.268" Width="1062.553">
+        Title="OScope Plugin Feature" Height="664.268" Width="1062.553">
     <Grid Margin="0,0,3.4,-0.2">
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="478" Margin="10,10,0,0" VerticalAlignment="Top" Width="1013">
             <TabItem Header="Signal Demo">
