@@ -100,10 +100,10 @@
     public static extern void WaitTag(int wTimeMs);
 
     [DllImport("fixed_lib.dll")]
-    public static extern void lPushTag(byte cmd,ref byte[] buffer,byte len);
+    public static extern byte lPushTag(byte cmd,IntPtr buffer,byte len);
 
     [DllImport("fixed_lib.dll")]
-    public static extern byte lPullTag(ref byte[] cmdx,ref byte[]len,ref byte[]buffer);
+    public static extern int lPullTag(IntPtr buffer);
 
     public static byte llPushTag(byte cmdx,ref byte[]byteBuff,byte len)
     {
