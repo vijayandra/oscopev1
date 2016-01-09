@@ -9,7 +9,25 @@
     <Grid Margin="0,0,3.4,-0.2">
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="478" Margin="10,10,0,0" VerticalAlignment="Top" Width="1013">
             <TabItem Header="Signal Demo">
-                <Grid Background="#FFE5E5E5" Margin="0,0,0.2,-8.6"/>
+                <Grid Background="#FFE5E5E5" Margin="0,0,123.2,21.4">
+                    <Label x:Name="TMR" Content="TMR" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="70" Height="54" FontSize="26.667"/>
+                    <TextBox x:Name="bCh1Max" HorizontalAlignment="Left" Height="54" Margin="378,97,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="172" FontSize="32"/>
+                    <Label x:Name="TMRDIV" Content="TMRDIV" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" Width="113" Height="54" FontSize="26.667"/>
+                    <Label x:Name="Ch1Min" Content="Ch1Min" HorizontalAlignment="Left" Margin="265,40,0,0" VerticalAlignment="Top" Width="108" Height="54" FontSize="26.667"/>
+                    <Label x:Name="Ch1Max" Content="Ch1Max" HorizontalAlignment="Left" Margin="265,99,0,0" VerticalAlignment="Top" Width="108" Height="54" FontSize="26.667"/>
+                    <TextBox x:Name="bTMR" HorizontalAlignment="Left" Height="54" Margin="128,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="132" FontSize="32"/>
+                    <TextBox x:Name="bCh1Min" HorizontalAlignment="Left" Height="54" Margin="373,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="172" FontSize="32"/>
+                    <TextBox x:Name="bTMRDIV" HorizontalAlignment="Left" Height="54" Margin="128,99,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="132" FontSize="32"/>
+                    <Label x:Name="Signal1" Content="Signal" HorizontalAlignment="Left" Margin="265,158,0,0" VerticalAlignment="Top" Width="100" Height="54" FontSize="26.667"/>
+                    <ComboBox x:Name="comboSig1" HorizontalAlignment="Left" Margin="378,158,0,0" VerticalAlignment="Top" Width="172" Height="54" FontSize="32"/>
+                    <Label x:Name="Ch1Max1" Content="Ch2Min" HorizontalAlignment="Left" Margin="563,36,0,0" VerticalAlignment="Top" Width="108" Height="54" FontSize="26.667"/>
+                    <Label x:Name="Ch1Max_Copy" Content="Ch2Max" HorizontalAlignment="Left" Margin="563,101,0,0" VerticalAlignment="Top" Width="108" Height="54" FontSize="26.667"/>
+                    <Label x:Name="Signal1_Copy" Content="Signal" HorizontalAlignment="Left" Margin="563,160,0,0" VerticalAlignment="Top" Width="100" Height="54" FontSize="26.667"/>
+                    <TextBox x:Name="bCh2Min" HorizontalAlignment="Left" Height="54" Margin="671,40,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="172" FontSize="32"/>
+                    <TextBox x:Name="bCh2Max" HorizontalAlignment="Left" Height="54" Margin="676,101,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="172" FontSize="32"/>
+                    <ComboBox x:Name="comboSig2" HorizontalAlignment="Left" Margin="671,160,0,0" VerticalAlignment="Top" Width="172" Height="54" FontSize="32" SelectionChanged="cSignal1_Copy_SelectionChanged"/>
+                    <Button x:Name="bStartSignal" Content="START" HorizontalAlignment="Left" Margin="618,318,0,0" VerticalAlignment="Top" Width="243" Height="80" FontSize="48"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Input Capture">
                 <Grid Background="#FFE5E5E5"/>

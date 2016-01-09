@@ -24,5 +24,10 @@ namespace Oscope_Control
         {
             InitializeComponent();
         }
+
+        private void cSignal1_Copy_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
