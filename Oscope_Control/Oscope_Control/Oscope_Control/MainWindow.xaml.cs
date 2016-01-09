@@ -17,6 +17,7 @@ using System.IO;
 using Microsoft.Win32;
 using Microsoft.Win32.SafeHandles;
 using System.Windows.Interop;
+using scope_hw;
 
 namespace Oscope_Control
 {
@@ -33,7 +34,7 @@ namespace Oscope_Control
             IntPtr windowHandle = (new WindowInteropHelper(this)).Handle;
             HwndSource src = HwndSource.FromHwnd(windowHandle);
             src.AddHook(new HwndSourceHook(WndProc));
-            //RegisterWindow(windowHandle);
+            scope_hw.fixed_lib.RegisterWin(windowHandle);
         }
 
         private void cSignal1_Copy_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -72,14 +72,17 @@
 
     //[DllImport("dllname.dll", CallingConvention=CallingConvention.Cdecl)]
     //public static extern void cFunction(ref MPLOT mPlot);
- [DllImport("kernel32.dll", EntryPoint = "LoadLibrary")]
-        static extern int LoadLibrary([MarshalAs(UnmanagedType.LPStr)] string lpLibFileName);
+    [DllImport("kernel32.dll", EntryPoint = "LoadLibrary")]
+    static extern int LoadLibrary([MarshalAs(UnmanagedType.LPStr)] string lpLibFileName);
 
-        [DllImport("kernel32.dll", EntryPoint = "GetProcAddress")]
-            static extern IntPtr GetProcAddress( int hModule, [MarshalAs(UnmanagedType.LPStr)] string lpProcName);
+    [DllImport("kernel32.dll", EntryPoint = "GetProcAddress")]
+    static extern IntPtr GetProcAddress( int hModule, [MarshalAs(UnmanagedType.LPStr)] string lpProcName);
 
-        [DllImport("kernel32.dll", EntryPoint = "FreeLibrary")]
-            static extern bool FreeLibrary(int hModule);
+    [DllImport("kernel32.dll", EntryPoint = "FreeLibrary")]
+    static extern bool FreeLibrary(int hModule);
+
+    [DllImport("fixed_lib.dll")]
+    public static extern Int16 RegisterWin(IntPtr windowHandle);
 
     [DllImport("fixed_lib.dll")]
     public static extern int lStart();
@@ -101,6 +104,41 @@
 
     [DllImport("fixed_lib.dll")]
     public static extern byte lPullTag(ref byte[] cmdx,ref byte[]len,ref byte[]buffer);
+
+    public static byte llPushTag(byte cmdx,ref byte[]byteBuff,byte len)
+    {
+        byte l;
+        int size = Marshal.SizeOf(byteBuff[0]) * byteBuff.Length;
+        IntPtr pnt = Marshal.AllocHGlobal(size);
+        Marshal.Copy(byteBuff, 0, pnt, byteBuff.Length);
+
+        l=lPushTag(cmdx,pnt,len);
+
+        Marshal.FreeHGlobal(pnt);
+
+        return l;
+    }
+
+    public static byte llPullTag(ref byte[]byteBuff,ref byte len)
+    {
+        byte cmdx;
+        int retVal;
+        int size = Marshal.SizeOf(byteBuff[0]) * byteBuff.Length;
+
+        IntPtr pnt = Marshal.AllocHGlobal(size);
+
+        retVal = lPullTag(pnt);
+
+        cmdx = (byte)retVal;
+        len  = (byte)(retVal>>8);
+
+        Marshal.Copy(pnt,byteBuff,0,byteBuff.Length);
+
+        Marshal.FreeHGlobal(pnt);
+
+        return cmdx;
+    }
+
     }
     }
 
