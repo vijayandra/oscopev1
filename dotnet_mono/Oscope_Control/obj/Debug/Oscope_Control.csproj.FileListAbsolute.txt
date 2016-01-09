@@ -1,0 +1,13 @@
+C:\github\oscopev1\dotnet_mono\Oscope_Control\bin\Debug\Oscope_Control.exe.config
+C:\github\oscopev1\dotnet_mono\Oscope_Control\bin\Debug\Oscope_Control.exe
+C:\github\oscopev1\dotnet_mono\Oscope_Control\bin\Debug\Oscope_Control.pdb
+C:\github\oscopev1\dotnet_mono\Oscope_Control\obj\Debug\MainWindow.g.cs
+C:\github\oscopev1\dotnet_mono\Oscope_Control\obj\Debug\App.g.cs
+C:\github\oscopev1\dotnet_mono\Oscope_Control\obj\Debug\Oscope_Control_MarkupCompile.cache
+C:\github\oscopev1\dotnet_mono\Oscope_Control\obj\Debug\Oscope_Control_MarkupCompile.lref
+C:\github\oscopev1\dotnet_mono\Oscope_Control\obj\Debug\MainWindow.baml
+C:\github\oscopev1\dotnet_mono\Oscope_Control\obj\Debug\Oscope_Control.g.resources
+C:\github\oscopev1\dotnet_mono\Oscope_Control\obj\Debug\Oscope_Control.Properties.Resources.resources
+C:\github\oscopev1\dotnet_mono\Oscope_Control\obj\Debug\Oscope_Control.csproj.GenerateResource.Cache
+C:\github\oscopev1\dotnet_mono\Oscope_Control\obj\Debug\Oscope_Control.exe
+C:\github\oscopev1\dotnet_mono\Oscope_Control\obj\Debug\Oscope_Control.pdb
