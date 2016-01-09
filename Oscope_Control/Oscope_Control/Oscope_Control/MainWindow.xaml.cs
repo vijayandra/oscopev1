@@ -12,6 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Runtime.InteropServices;
+using System.IO;
+using Microsoft.Win32;
+using Microsoft.Win32.SafeHandles;
+using System.Windows.Interop;
 
 namespace Oscope_Control
 {
@@ -22,12 +27,41 @@ namespace Oscope_Control
     {
         public MainWindow()
         {
+            //private const int WM_DESTROY = 0x0002;
             InitializeComponent();
+
+            IntPtr windowHandle = (new WindowInteropHelper(this)).Handle;
+            HwndSource src = HwndSource.FromHwnd(windowHandle);
+            src.AddHook(new HwndSourceHook(WndProc));
+            //RegisterWindow(windowHandle);
         }
 
         private void cSignal1_Copy_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
+        {
+            float dVal=0;
+            int indexer;
+
+            dVal = (float)(wParam.ToInt32())/1000.0f;
+            indexer = (int)lParam;
+            // Handle whatever Win32 message it is we feel like handling
+            //if (lParam.ToInt32() == mTIME_Msg)
+            //if(msg == mTIME_Msg)
+                //this.status_msg.Text = "Indexer=" + indexer.ToString()+" Value=" + dVal.ToString();
+                //this.status_msg.Text = "my_num....ToString()"+(iCounter++);
+                //my_num++;
+            //if (msg == WM_DESTROY)
+            //{
+                //IntPtr windowHandle = (new WindowInteropHelper(this)).Handle;
+                //HwndSource src = HwndSource.FromHwnd(windowHandle);
+                //src.RemoveHook(new HwndSourceHook(this.WndProc));
+                //handled = true;
+            //}
+            return IntPtr.Zero;
         }
     }
 }
