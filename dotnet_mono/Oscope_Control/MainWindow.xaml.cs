@@ -35,6 +35,8 @@ namespace Oscope_Control
             HwndSource src = HwndSource.FromHwnd(windowHandle);
             src.AddHook(new HwndSourceHook(WndProc));
             scope_hw.fixed_lib.RegisterWin(windowHandle);
+            scope_hw.fixed_lib.lStart();
+            //fixed_lib.lStop();
         }
 
         private void cSignal1_Copy_SelectionChanged(object sender, SelectionChangedEventArgs e)
