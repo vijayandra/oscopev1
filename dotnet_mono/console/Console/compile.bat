@@ -1,5 +1,8 @@
 set PATH=%PATH%;C:\Windows\Microsoft.NET\Framework\v4.0.30319
-rem csc /target:my.exe /out:File2.dll /warn:0 /nologo /debug *.cs
-rem csc /out:my.exe  /warn:0 /nologo /debug /reference:PresentationFramework.dll program.cs serial_comm.cs ini_file.cs stopWatch.cs ring_buffer.cs fixed_lib.cs >error.txt
-csc /out:my.exe  /warn:0 /nologo /debug program.cs serial_comm.cs ini_file.cs stopWatch.cs ring_buffer.cs fixed_lib.cs >error.txt
-
+set CSC=C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe
+%CSC% /target:module ..\..\..\Oscope_Control\Oscope_Control\Oscope_Control\fixed_lib.cs
+%CSC% /target:module ..\..\..\Oscope_Control\Oscope_Control\Oscope_Control\serial_comm.cs
+%CSC% /target:module ..\..\..\Oscope_Control\Oscope_Control\Oscope_Control\ini_file.cs
+%CSC% /target:module ..\..\..\Oscope_Control\Oscope_Control\Oscope_Control\stopWatch.cs
+%CSC% /target:module ..\..\..\Oscope_Control\Oscope_Control\Oscope_Control\ring_buffer.cs
+%CSC% /out:console.exe program.cs -addmodule:fixed_lib.netmodule -addmodule:serial_comm.netmodule -addmodule:ini_file.netmodule -addmodule:stopWatch.netmodule -addmodule:ring_buffer.netmodule
