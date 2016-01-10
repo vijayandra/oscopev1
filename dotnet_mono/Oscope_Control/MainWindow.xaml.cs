@@ -26,9 +26,16 @@ namespace Oscope_Control
     /// </summary>
     public partial class MainWindow : Window
     {
+        private const int WM_HW_COM_FAIL = (0x400 + 35);
+        private const int WM_HW_CONNECTED = (0x400 + 36);
+        private const int WM_HW_NOTCONNECTED = (0x400 + 37);
+        private const int WM_DESTROY = 0x0002;
+
         public MainWindow()
         {
             //private const int WM_DESTROY = 0x0002;
+        
+
             InitializeComponent();
 
             IntPtr windowHandle = (new WindowInteropHelper(this)).Handle;
@@ -51,18 +58,27 @@ namespace Oscope_Control
 
             dVal = (float)(wParam.ToInt32())/1000.0f;
             indexer = (int)lParam;
-            // Handle whatever Win32 message it is we feel like handling
-            //if (lParam.ToInt32() == mTIME_Msg)
-            //if(msg == mTIME_Msg)
-                //this.status_msg.Text = "Indexer=" + indexer.ToString()+" Value=" + dVal.ToString();
-                //this.status_msg.Text = "my_num....ToString()"+(iCounter++);
-                //my_num++;
+
+            if (msg == WM_DESTROY)
+            {
+                IntPtr windowHandle = (new WindowInteropHelper(this)).Handle;
+                HwndSource src = HwndSource.FromHwnd(windowHandle);
+                src.RemoveHook(new HwndSourceHook(this.WndProc));
+                handled = true;
+            }
+            else if(msg==WM_HW_COM_FAIL)
+            {
+            }
+            else if(msg==WM_HW_CONNECTED)
+            {
+            }
+            else if(msg==WM_HW_NOTCONNECTED)
+            {
+            }
+
+
             //if (msg == WM_DESTROY)
             //{
-                //IntPtr windowHandle = (new WindowInteropHelper(this)).Handle;
-                //HwndSource src = HwndSource.FromHwnd(windowHandle);
-                //src.RemoveHook(new HwndSourceHook(this.WndProc));
-                //handled = true;
             //}
             return IntPtr.Zero;
         }
