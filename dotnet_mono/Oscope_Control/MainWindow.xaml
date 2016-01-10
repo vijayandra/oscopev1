@@ -62,6 +62,7 @@
         <Label x:Name="label_Copy" Content="Label" Margin="10,515,0,-37.4" VerticalAlignment="Top" Height="33" HorizontalAlignment="Left" Width="57" RenderTransformOrigin="0.744,-2.267"/>
         <RadioButton x:Name="connStatus" Content="" Margin="682,513,-0.8,-37.4" VerticalAlignment="Top" Height="35" RenderTransformOrigin="-0.718,0.434" Foreground="#FFBD2121"/>
         <TextBlock x:Name="status" Margin="362,515,0,-58.4" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="54" FontSize="18.667" HorizontalAlignment="Left" Width="255"/>
+        <Button x:Name="Connect" Content="Connect" HorizontalAlignment="Left" Height="54" Margin="733,515,-55.6,-69.6" VerticalAlignment="Top" Width="98" Click="Connect_Click"/>
 
     </Grid>
 </Window>

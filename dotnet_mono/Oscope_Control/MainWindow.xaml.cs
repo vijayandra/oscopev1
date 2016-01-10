@@ -26,24 +26,14 @@ namespace Oscope_Control
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const int WM_HW_COM_FAIL = (0x400 + 35);
+        private const int WM_HW_COM_OPEN = (0x400 + 35);
         private const int WM_HW_CONNECTED = (0x400 + 36);
         private const int WM_HW_NOTCONNECTED = (0x400 + 37);
         private const int WM_DESTROY = 0x0002;
 
         public MainWindow()
         {
-            //private const int WM_DESTROY = 0x0002;
-        
-
             InitializeComponent();
-
-            IntPtr windowHandle = (new WindowInteropHelper(this)).Handle;
-            HwndSource src = HwndSource.FromHwnd(windowHandle);
-            src.AddHook(new HwndSourceHook(WndProc));
-            scope_hw.fixed_lib.RegisterWin(windowHandle);
-            scope_hw.fixed_lib.lStart();
-            //fixed_lib.lStop();
         }
 
         private void cSignal1_Copy_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -66,11 +56,13 @@ namespace Oscope_Control
                 src.RemoveHook(new HwndSourceHook(this.WndProc));
                 handled = true;
             }
-            else if(msg==WM_HW_COM_FAIL)
+            else if(msg==WM_HW_COM_OPEN)
             {
+                status.Text = "Just Port Open successful connected";
             }
             else if(msg==WM_HW_CONNECTED)
             {
+                status.Text = "Oscilloscope is connected";
             }
             else if(msg==WM_HW_NOTCONNECTED)
             {
@@ -81,6 +73,17 @@ namespace Oscope_Control
             //{
             //}
             return IntPtr.Zero;
+        }
+
+        private void Connect_Click(object sender, RoutedEventArgs e)
+        {
+            IntPtr windowHandle = (new WindowInteropHelper(this)).Handle;
+            HwndSource src = HwndSource.FromHwnd(windowHandle);
+            src.AddHook(new HwndSourceHook(WndProc));
+            scope_hw.fixed_lib.RegisterWin(windowHandle);
+            scope_hw.fixed_lib.lStart();
+            //fixed_lib.lStop();
+
         }
     }
 }
