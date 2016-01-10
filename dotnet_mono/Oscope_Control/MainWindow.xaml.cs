@@ -58,7 +58,7 @@ namespace Oscope_Control
             }
             else if(msg==WM_HW_COM_OPEN)
             {
-                status.Text = "Just Port Open successful connected";
+                status.Text = "Port Open OK";
             }
             else if(msg==WM_HW_CONNECTED)
             {
