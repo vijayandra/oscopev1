@@ -65,3 +65,15 @@ Linux 32/64 Bit
 9.Right bottom LED should turn green (grey when not connected).
 
 15. Scope/Signal generator Ready to use.
+
+
+----------
+Bootloader(Firmware Update Procedure)
+
+copy following files to directory /etc/udev/rules.d
+as bootloader works as HID device. this is mandatory
+for linux platform for bootloader to work.
+
+z010_mchp_tools.rules
+z011_mchp_jlink.rules
+
