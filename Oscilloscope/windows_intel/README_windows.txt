@@ -4,7 +4,8 @@ This is READEME_windows.txt which describes how to install Oscilloscope sw for w
 Please download all contents of following
 
 https://github.com/vijayandra/oscopev1/tree/master/Oscilloscope/windows_intel
-save them some where in your folder where you can remember easily, 
+save them some where in your folder where you can remember easily,
+(Also very important, add this folder into PATH variable of computer)
 currently it does not have installer.
 Please follow following procedure according to your operating system.
 
@@ -22,7 +23,7 @@ WinXP 32/64 Bit
 9. Go to directory where Oscilloscope files are saved.
 10. start iwscope application, close it after few seconds.
 11. A new file scope.ini generated at same time.
-12. Now edit scope.ini file.Edit line for example COM6 type  
+12. Now edit scope.ini file.Edit line for example COM6 type
 COMPORT=6 in scope.ini
 if new port is COM47 then COMPORT=47
 
@@ -34,7 +35,7 @@ if new port is COM47 then COMPORT=47
 
 Windows 7/Windows 10
 ----------------------------
-As this driver now been certified with Microsoft WHQL 
+As this driver now been certified with Microsoft WHQL
 http://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_devices/how-do-i-disable-driver-signature-enforcement-win/a53ec7ca-bdd3-4f39-a3af-3bd92336d248?auth=1
 
 1. Please read above microsoft link, you need to start PC in safe more before you install iwscope.inf file.
