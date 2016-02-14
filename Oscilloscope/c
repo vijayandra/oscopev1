@@ -1,0 +1,5 @@
+git config --global user.email "vsingh.usa@gmail.com"
+git config --global user.name "Vijayandra Singh"
+git add .
+git commit -m "First commit"
+git push origin master
