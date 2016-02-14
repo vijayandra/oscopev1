@@ -13,6 +13,8 @@ TEMPLATE      = app
 CONFIG       += release
 QMAKE_CXXFLAGS_RELEASE -= -O2
 
+INCLUDEPATH  += ../common
+
 #Modify this line according to target
 LIBS += -L../Oscilloscope/ubuntu_intel_64 -lfixed_lib
 #LIBS += -L../Oscilloscope/ubuntu_intel_32 -lfixed_lib
