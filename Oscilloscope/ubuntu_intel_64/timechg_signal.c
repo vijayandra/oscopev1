@@ -1,3 +1,8 @@
+// Please note :
+// this is script "C"
+// Do not compile this code, it should run as it is
+// uses:
+// $$ Prompt >> run_myscript timechg_signal.c
 #include <stdio.h>
 
 int main(void)
