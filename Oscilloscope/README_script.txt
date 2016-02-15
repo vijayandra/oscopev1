@@ -12,6 +12,15 @@ How to update firmware.
 6. Second Click          Status Msg << Oscilloscope Bootloader Mode>>
 7. Third Click           Status Msg << Erasing Flash>>
 
+////////////////////////////////////////////////////
+// Why we needed three clicks to update firmware ??
+// When we click it first time device reenumerates
+// as HID device(Enters special bootloader Mode),
+// If its first time  it may long time (~30 seconds)
+// for Windows PC to reenumerate as HID,also Firmware
+// upgrade on Windows takes twise time then Linux pc.
+////////////////////////////////////////////////////
+
 8. <<Progress and Last Msg CRC Good Jumping to main >>
 
 .. Firmware update successful
