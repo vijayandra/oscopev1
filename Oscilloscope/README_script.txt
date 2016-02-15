@@ -1,4 +1,19 @@
 
+/////////////////////////////////////////////////
+Bootloader(Firmware Update Procedure)
+
+copy following files to directory /etc/udev/rules.d
+as bootloader works as HID device. this is mandatory
+for linux platform for bootloader to work.
+located under rules directory
+
+z010_mchp_tools.rules
+z011_mchp_jlink.rules
+/////////////////////////////////////////////////
+
+
+
+
 1. Please update to latest firmware.
 
 How to update firmware.
