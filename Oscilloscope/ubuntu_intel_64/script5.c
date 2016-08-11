@@ -7,9 +7,9 @@ int main()
     i=0;
     BannerMsg("balle",10);
     ms_sleep(1000);
-    BannerMsg("Hi Natasha balle",10);
+    BannerMsg("Hi This is Test Message",10);
     ms_sleep(1000);
-    BannerMsg("elepahnant fballe",10);
+    BannerMsg("elepahnant type",10);
 
     return 0;
 }
