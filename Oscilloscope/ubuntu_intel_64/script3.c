@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+    int i;
+    int j;
+    j=0;
+    i=0;
+    BannerMsg("balle",10);
+    ms_sleep(1000);
+    BannerMsg("Hi This is Test Message",10);
+    ms_sleep(1000);
+    BannerMsg("elepahnant type",10);
+
+    return 0;
+}
